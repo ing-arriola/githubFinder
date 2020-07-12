@@ -1,15 +1,19 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 export class Search extends Component {
   state = {
     text: "",
   };
 
+  static propTypes = {
+    searchUsers: PropTypes.func.isRequired,
+  };
+
   onType = (e) => {
-    this.setState({ 
-        [e.target.name]: e.target.value, 
+    this.setState({
+      [e.target.name]: e.target.value,
     });
-  }
+  };
 
   onSubmit = (e) => {
     e.preventDefault();
@@ -21,16 +25,16 @@ export class Search extends Component {
     return (
       <div>
         <form onSubmit={this.onSubmit} className="form">
-          <input 
-          type="text" 
-          name="text" 
-          placeholder="Search an user.."
-          onChange={this.onType} />
+          <input
+            type="text"
+            name="text"
+            placeholder="Search an user.."
+            onChange={this.onType}
+          />
           <input
             type="submit"
             value="Search"
             className="btn btn-dark btn-block"
-            
           />
         </form>
       </div>
