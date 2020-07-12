@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/layouts/Navbar";
 import Users from "./components/users/Users";
+import Search from "./components/users/Search";
 import axios from "axios";
 import "./App.css";
 
