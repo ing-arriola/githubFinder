@@ -4,6 +4,7 @@ import Navbar from "./components/layouts/Navbar";
 import Users from "./components/users/Users";
 import Search from "./components/users/Search";
 import Alert from "./components/layouts/Alert";
+import About from "./components/pages/About";
 import axios from "axios";
 import "./App.css";
 
