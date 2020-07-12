@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
 export class Search extends Component {
+  state = {
+    text: "",
+  };
+
+  onType = (e) => this.setState({ [e.target.name]: e.target.value });
+
   render() {
     return (
       <div>
@@ -10,6 +16,7 @@ export class Search extends Component {
             type="submit"
             value="Search"
             className="btn btn-dark btn-block"
+            onChange={this.onType}
           />
         </form>
       </div>

@@ -22,6 +22,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar title="Github Finder" icon="fab fa-github" />
         <div className="container">
+          <Search />
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
       </React.Fragment>
