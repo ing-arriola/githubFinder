@@ -52,6 +52,32 @@ export class User extends Component {
             <h1>{name}</h1>
             <p>{location}</p>
           </div>
+          <div>
+            {bio && (
+              <Fragment>
+                <h3>Bio</h3>
+                <p>{bio}</p>
+              </Fragment>
+            )}
+            <ul>
+              <li>
+                {blog && (
+                  <Fragment>
+                    <p>Website: {blog}</p>
+                  </Fragment>
+                )}
+              </li>
+            </ul>
+            <a href={html_url} className="btn btn-dark my-1">
+              Visit Github Profile
+            </a>{" "}
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="badge badge-success">
+            Public Repos: {public_repos}
+          </div>
+          <div className="badge badge-dark">Public Gist: {public_gists}</div>
         </div>
       </Fragment>
     );
