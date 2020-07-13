@@ -46,6 +46,7 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
             style={{ width: "150px" }}
           />
           <h1>{name}</h1>
+          <p>{login}</p>
           <p>{location}</p>
         </div>
         <div>
