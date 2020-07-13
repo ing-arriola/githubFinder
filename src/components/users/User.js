@@ -23,6 +23,7 @@ export class User extends Component {
       html_url,
       public_repos,
       public_gists,
+      hireable,
     } = this.props.user;
 
     const { loading } = this.props;
@@ -34,6 +35,24 @@ export class User extends Component {
         <Link to="/" className="btn btn-light">
           Back to Search
         </Link>
+        Hireable:{" "}
+        {hireable ? (
+          <i className="fas fa-check text-success" />
+        ) : (
+          <i className="fas fa-times-circle text-danger" />
+        )}
+        <div className="card grid-2">
+          <div className="all-center">
+            <img
+              src={avatar_url}
+              className="round-img"
+              alt="user avatar"
+              style={{ width: "150px" }}
+            />
+            <h1>{name}</h1>
+            <p>{location}</p>
+          </div>
+        </div>
       </Fragment>
     );
   }
