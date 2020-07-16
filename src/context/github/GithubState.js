@@ -26,7 +26,7 @@ const GithubState = (props) => {
     );
     dispatch({
       type: SEARCH_USERS,
-      payload: res.data,
+      payload: res.data.items,
     });
     // old way...
     // this.setState({ users: res.data.items, loading: false });
@@ -41,6 +41,7 @@ const GithubState = (props) => {
         user: state.user,
         repos: state.repos,
         loading: state.loading,
+        searchUsers,
       }}
     >
       {props.children}
