@@ -14,6 +14,13 @@ export default (state, action) => {
         loading: true,
       };
       break;
+    case CLEAR_USERS:
+      return {
+        ...state,
+        users: [],
+        loading: false,
+      };
+      break;
     case SEARCH_USERS:
       return {
         ...state,
