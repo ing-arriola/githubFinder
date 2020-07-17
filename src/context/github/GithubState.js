@@ -4,7 +4,7 @@ import GithubContext from "./githubContext";
 import GithubReducer from "./githubReducer";
 import {
   SEARCH_USERS,
-  GET_USERS,
+  GET_USER,
   CLEAR_USERS,
   GET_REPOS,
   SET_LOADING,
@@ -30,6 +30,24 @@ const GithubState = (props) => {
     });
     // old way...
     // this.setState({ users: res.data.items, loading: false });
+  };
+
+  // Get single Github user
+
+  const getUser = async (username) => {
+    setLoading();
+    // OLD way
+    // this.setState({ loading: true });
+    const res = await axios.get(
+      `https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+    );
+
+    dispatch({
+      type: GET_USER,
+      payload: res.data,
+    });
+    // Old way
+    // this.setState({ user: res.data, loading: false });
   };
 
   // Clear users from state

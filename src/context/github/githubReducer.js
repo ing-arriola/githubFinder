@@ -1,6 +1,6 @@
 import {
   SEARCH_USERS,
-  GET_USERS,
+  GET_USER,
   CLEAR_USERS,
   GET_REPOS,
   SET_LOADING,
@@ -13,21 +13,18 @@ export default (state, action) => {
         ...state,
         loading: true,
       };
-      break;
     case CLEAR_USERS:
       return {
         ...state,
         users: [],
         loading: false,
       };
-      break;
     case SEARCH_USERS:
       return {
         ...state,
         users: action.payload,
         loading: false,
       };
-      break;
 
     default:
       return state;
