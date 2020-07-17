@@ -6,13 +6,10 @@ import User from "./components/users/User";
 import Search from "./components/users/Search";
 import Alert from "./components/layouts/Alert";
 import About from "./components/pages/About";
-import axios from "axios";
 import GithubState from "./context/github/GithubState";
 import "./App.css";
 
 const App = () => {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
   // async componentDidMount() {
   //   this.setState({ loading: true });
