@@ -4,7 +4,6 @@ import Navbar from "./components/layouts/Navbar";
 import User from "./components/users/User";
 import Home from "./components/pages/Home";
 import Alert from "./components/layouts/Alert";
-import NonFound from "./components/pages/NotFound";
 import About from "./components/pages/About";
 import GithubState from "./context/github/GithubState";
 import AlertState from "./context/alert/alertState";
